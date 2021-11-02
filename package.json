@@ -1,0 +1,23 @@
+{
+  "name": "notify-sdk",
+  "version": "0.0.0",
+  "scripts": {
+    "dev:sdk": "vite -c ./scripts/sdk_dev.js",
+    "dev:sdk-gen-js": "vite build -c ./scripts/sdk_build_watch.js --watch",
+    "dev:frame": "vite -c ./scripts/frame.js",
+    "build:sdk": "vite build -c ./scripts/sdk_prod.js",
+    "build:frame": "vite build -c ./scripts/frame.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue-jsx": "^1.2.0",
+    "ant-design-vue": "^2.2.8",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.2",
+    "less": "^4.1.2",
+    "unplugin-vue-components": "^0.17.0",
+    "vite": "^2.6.0"
+  }
+}
