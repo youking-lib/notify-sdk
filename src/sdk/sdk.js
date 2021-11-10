@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import { Button, message, notification } from "ant-design-vue";
 import Message from "./message";
 import Drawer from "./drawer";
+import App from "../App.vue";
 
 import "./sdk.less";
 
@@ -30,7 +31,7 @@ class NotifySdk {
 
   _buildVue() {
     // https://next.antdv.com/docs/vue/getting-started-cn/ 局部导入组件
-    const app = createApp();
+    const app = createApp(App);
     const el = document.createElement("div");
 
     document.body.appendChild(el);
@@ -40,6 +41,8 @@ class NotifySdk {
 
     app.use(Button);
     app.use(notification);
+
+    app.mount(el);
   }
 
   showImporantMessage() {

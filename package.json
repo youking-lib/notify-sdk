@@ -2,7 +2,7 @@
   "name": "notify-sdk",
   "version": "0.0.0",
   "scripts": {
-    "dev:sdk": "vite -c ./scripts/sdk_dev.js",
+    "dev:sdk": "vite -c ./scripts/sdk_dev.js --port 3001",
     "dev:sdk-gen-js": "vite build -c ./scripts/sdk_build_watch.js --watch",
     "dev:frame": "vite -c ./scripts/frame.js",
     "build:sdk": "vite build -c ./scripts/sdk_prod.js",
