@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp, nextTick } from "vue";
 import { Button, message, notification } from "ant-design-vue";
 import Message from "./message";
 import Drawer from "./drawer";
@@ -15,7 +15,9 @@ class NotifySdk {
     this.message = new Message();
     this.drawer = new Drawer();
 
-    this._buildVue();
+    nextTick(() => {
+      this._buildVue();
+    });
   }
 
   async init() {
@@ -50,6 +52,10 @@ class NotifySdk {
   }
 
   showDrawer() {}
+
+  closeDrawer() {
+    this.drawer.closeDrawer();
+  }
 }
 
 export default new NotifySdk();
