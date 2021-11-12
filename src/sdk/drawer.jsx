@@ -1,4 +1,6 @@
+import {} from "vue";
 import { notification } from "ant-design-vue";
+import DrawerContent from "./DrawerContent.vue";
 
 export default class Drawer {
   static DRAWER_KEY = "Drawer_Key";
@@ -7,7 +9,7 @@ export default class Drawer {
     notification.open({
       key: Drawer.DRAWER_KEY,
       message: "Notification Title",
-      description: <iframe src="http://localhost:3000/index_frame.html" />,
+      description: <DrawerContent onClose={() => console.log(123)} />,
       duration: null,
       style: {
         width: "300px",
